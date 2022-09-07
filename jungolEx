@@ -1,0 +1,225 @@
+package ict_study_for3;
+import java.util.Scanner;
+public class For_1 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+//		int n = input.nextInt();
+//		자가진단 1
+//		int sum = 0;
+//		int count = 0;
+//			
+//		for(int i = 1; i <= n; i++) {
+//			if(i%2==1) {
+//				sum += i;
+//				count++;
+//				if(sum>=n) {
+//					System.out.println(count + " " + sum);
+//					break;
+//				}
+//			}
+//		}
+
+//		자가진단 2
+//		for(int i = 1; i<=n; i++) {
+//			for(int j = 1; j<=i; j++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+		
+//		자가진단 3
+//		for(int a=1; a<=n; a++) {
+//			for(int b=n; b>=a; b--) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+//		for(int i = 1; i<=n; i++) {
+//			for(int j =1; j<=i; j++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+		
+//		자가진단 4
+//		for(int i = 1; i <=n; i++) {
+////			공백주는for
+//			for(int blank = 1; blank <=i-1; blank++) {
+//				System.out.print(" ");
+//			}
+////			별찍어주는 for
+//			for(int star=n; star>=i; star--) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+		
+//		자가진단 5 : 이거왜 20점임
+//		for(int i=1; i<=n; i++) {
+//			for(int blank = 1; blank <= i-1; blank++) {
+//				System.out.print(" ");
+//			}
+//			for(int star = n+2; star >= 2*i-1; star--) {
+//				System.out.print("*");
+//			}
+//			
+//			System.out.println();
+//		}
+		
+//		자가진단 6
+//		char cap = 'A';
+//		
+//		for(int i = 1; i<=n; i++) {
+//			for(int j = n; j>=i; j--) {
+//				System.out.print(cap);
+//				cap++;
+//			}
+//			
+//			System.out.println();
+//		}
+		
+//		자가진단 7
+//		char cap = 'A';
+//		int num = 1;
+//		
+//		for(int line = 1; line <=n; line++) {
+//			for(int i = n; i>=line; i--) {
+//				System.out.print(num + " ");
+//				num++;
+//			}
+//			for(int j = 1; j<=line; j++) {
+//				System.out.print(cap + " ");
+//				cap++;
+//			}
+//			System.out.println();
+//		}
+		
+//		형성평가 1
+//		int sum = 0;
+//		int count = 0;
+//		int avg = 0;
+//		
+//		while(true) {
+//			int n = input.nextInt();
+//			sum += n;
+//			count++;
+//						
+//			if(n==0) {
+//				count--;
+//				avg = sum/count;
+//				System.out.println(sum + " " + avg);
+//				break;
+//				}
+//			else if(count==20) {
+//				System.out.println(sum + " " + avg);
+//				break;
+//				}
+//		}
+		
+//		형성평가 2
+//		int n = input.nextInt();
+//		int seven = 0;
+//		if(n>=1 || n<=100) {
+//			for(int i = 1; i<=100; i++) {
+//				seven = n*i;
+//				
+//				if (seven%10==0) {
+//					System.out.print(seven + " ");
+//					break;
+//				}
+//				else if(seven >= 100) {
+//					break;
+//				}
+//				else System.out.print(seven + " ");
+//			}
+//		}
+		
+//		형성평가 3
+//		int n = input.nextInt();
+//		for(int i = 1; i<=2*n-1; i++) {
+//			if(i<=n) {
+//				for(int in_star = 1; in_star <= i; in_star++) {
+//					System.out.print("*");
+//				}
+//			}
+//			else if(i>n) {
+//				for(int dec_star = n; dec_star > i-n; dec_star--) {
+//					System.out.print("*");
+//				}
+//			}
+//			System.out.println();
+//		}
+		
+//		형성평가 4 : 망할 규칙 잘못 찾았네
+//		int n = input.nextInt();
+//		for(int i = 1; i<= 2*n-1; i++) {
+//			if(i<=n) {
+//				for(int top_blank = 1; top_blank <= i-1; top_blank++) {
+//					System.out.print(" ");
+//				}
+//				for(int top_star = n+2; top_star >= 2*i-1; top_star--) {
+//					System.out.print("*");
+//				}
+//			}
+//			else if(i>n) {
+//				for(int bot_blank = n; bot_blank > i-(n-1); bot_blank--) {
+//					System.out.print(" ");
+//				}
+//				for(int bot_star =n; bot_star <= (2*i)-n; bot_star++) {
+//					System.out.print("*");
+//				}
+//			}
+//			System.out.println();
+//		}
+		
+//		형성평가 5
+//		int n = input.nextInt();
+//		for(int line = 1; line <=n; line++) {
+//			for(int blank = 2*n-1; blank >= 2*line-1; blank--) {
+//				System.out.print(" ");
+//			}
+//			for(int star = 1; star <= 2*line-1; star++) {
+//				System.out.print("*");
+//			}
+//			
+//			System.out.println();
+//		}
+		
+//		형성평가 6
+//		int n = input.nextInt();
+//		int num ;
+//		
+//		for(int i = 1; i <= n; i++) {
+//			num=0;
+//			for(int blank = 1; blank <= n-i; blank++) {
+//				System.out.print("  ");
+//			}
+//			for(int star=1; star <= i; star++) {
+//				num++;
+//				System.out.print(num + " ");
+//			}
+//			System.out.println();
+//		}
+		
+//		형성평가 7
+		int n = input.nextInt();
+		
+		char cap = 'A';
+		int num = 0;
+		
+		for(int line = 1; line <=n; line++) {
+			for(int i = n; i <= n-(line-1); i--) {
+				
+				System.out.print(cap + " ");
+				cap++;
+			}
+			
+			System.out.println();
+		}
+		
+		
+	}
+			
+}
+
