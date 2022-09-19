@@ -87,23 +87,80 @@ public class Array_1 {
 //		System.out.println(min);
 		
 //		자가진단 7
-		int[] numArr = new int[10];
+//		int[] numArr = new int[10];
+//		Scanner input = new Scanner(System.in);
+//		int min ;
+//		int max ;
+//		
+//		for(int i = 0; i<numArr.length; i++) {
+//			numArr[i] = input.nextInt();
+//		}
+//		
+//	
+//		for(int i=1; i<numArr.length; i++) {
+//			if(numArr[i]>100) {
+//				모르겟다아아아앍......
+//			
+//		
+//		}
+	
+//		자가진단 8
+//		Scanner input = new Scanner(System.in);
+//		int[] numArr = new int[10];
+//		int count=0;
+//		int sum_even=0;
+//		int sum_odd=0;
+//		double avg=0.0;
+//	
+//		
+//		for(int i = 0; i <numArr.length; i++) {
+//			numArr[i] = input.nextInt();
+//			
+//			if(i%2==1) { // 짝수번째입력된값 = 인덱스가 홀수
+//				sum_even+=numArr[i];
+//			}
+//			else if(i==0 || i%2==0) { // 홀수번째입력된값 = 인덱스가 짝수거나 0일때
+//				sum_odd+=numArr[i];
+//				count++;
+//				System.out.println(sum_odd + "count : " + count);
+//			}
+//			avg=sum_odd/(double)count;
+//		}
+//		System.out.println("sum : " + sum_even);
+//		System.out.printf("avg : %.1f", avg);
+//		
+//		자가진단 9 : 음 어려운데.....
 		Scanner input = new Scanner(System.in);
+		int[] numArr = new int[10];
+//		int[] descArr = new int[10];
+		int temp = 0;
 		
-		for(int i = 0; i<numArr.length; i++) {
+		for(int i = 0; i <numArr.length; i++) {
 			numArr[i] = input.nextInt();
 		}
-		int min = numArr[0];
-		int max = numArr[0];
-		
-		for(int i=1; i<numArr.length; i++) {
-			if(numArr[i]>100) {
-				if(min>numArr[i] ) {
-				 
-				min=numArr[i];
-				} 
+//		int max = numArr[0];
+//		
+//		for(int i = 0 ; i < numArr.length; i++) {
+//			if(max<numArr[i]) { // numArr의 0인덱스 값이 들어 있는 max가 numArr의 다음 인덱스 값 보다 작으면
+//				temp = numArr[i];
+//				for(int j = 0; j<descArr.length; j++) {
+//					descArr[j] = temp;
+//				}
+//			}
+//		}
+		for(int i = 0 ; i < numArr.length; i++) {
+			for(int j = i; j<numArr.length; j++) { 
+				// numArr의 0번 인덱스일 경우 0 ~ 9까지 돌면서 값을 비교했을때 앞인덱스가 뒷 인덱스보다 작으면
+				if(numArr[i] < numArr[j]) { 
+					temp = numArr[i];		// 앞 인덱스값을 temp에 잠시 넣어두고
+					numArr[i] = numArr[j];	// 앞 인덱스에 큰 값을 넣어줌
+					numArr[j] = temp;		// 뒷 인덱스에는 앞인덱스에 들어 있던값 넣어줌. 비교했을때 큰 값이 앞 인덱스에 담기도록
+				}
 			}
-			System.out.println(min);}
+		}
+		for(int i=0; i<numArr.length; i++) {
+			System.out.print(numArr[i] + " ");
+		}
 		
 	}	
 }
